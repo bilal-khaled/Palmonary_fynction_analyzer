@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obstructive lung disease</title>
+    <link rel="icon" href="../static/images/medical.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: white;
+        box-sizing: border-box;
+        /* color: white; */
+        font-size: 17px;
+        background: url(main-img.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      main {
+        margin: 0 40px 0 40px;
+        background-color: rgb(3, 110, 145);
+        background: rgba(0, 0, 0, 0.5);
+        margin-top: 100px;
+        border-radius: 10px;
+        padding: 20px 20px 20px 40px;
+      }
+      .inputs {
+        width: 200px;
+        margin: 10px;
+        margin-top: 15px;
+        background-color: rgb(133, 179, 192);
+        font-weight: bold;
+        font-size: 15px;
+        /* color: white; */
+        border: none;
+        border-radius: 10px;
+        margin-left: 200px;
+        padding: 15px 0 15px 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+      }
+      h2 {
+        margin: 20px 20px 20px 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><strong>obstructive lung disease</strong></h2>
+    <main>
+      <h1>Bronchodilator Test</h1>
+      <br>
+      <p>
+        A test used to diagnose and monitor obstructive lung diseases such as
+        asthma and chronic obstructive pulmonary disease (COPD). It involves
+        measuring lung function before and after inhaling a medication called a
+        bronchodilator, which relaxes and opens up the airways in the lungs.
+      </p>
+      <br>
+      <ol>
+        <li>
+          Preparation: You will be asked to refrain from using certain
+          medications that could affect the results of the test, such as
+          bronchodilators, for a period of time before the test. You may also be
+          asked to avoid consuming caffeine or other stimulants before the test.
+        </li>
+        <li>
+          Lung function tests: your first spirometry measurements will be
+          applied.
+        </li>
+        <li>
+          Bronchodilator inhalation: You will then inhale a measured dose of a
+          bronchodilator medication such as albuterol or salbutamol, using a
+          nebulizer or inhaler. The medication will relax and open up the
+          airways in your lungs, making it easier to breathe.
+        </li>
+        <li>
+          Repeat lung function tests: After waiting a few minutes for the
+          medication to take effect, you will be asked to perform the same
+          breathing tests again to measure any improvements in lung function.
+          The results will be compared to your baseline lung function
+          measurements taken before the inhalation.
+        </li>
+      </ol>
+      <br>
+      <p>
+        It's important to follow your healthcare provider's instructions and ask
+        any questions you may have before, during, or after the test.
+      </p>
+
+      <section>
+        <input
+          type="submit"
+          class="inputs"
+          value="Take The Test"
+          onclick="submitForm1()"
+        />
+        <input
+          type="submit"
+          class="inputs"
+          value="Home Page"
+          onclick="submitForm()"
+        />
+      </section>
+    </main>
+    <script>
+      function submitForm() {
+        event.preventDefault();
+        window.location = "index";
+      }
+      function submitForm1() {
+        event.preventDefault();
+        window.location = "obs-table";
+      }
+    </script>
+  </body>
+</html>

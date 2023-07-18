@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resrictive info</title>
+    <link rel="icon" href="../static/images/medical.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+        font-size: 17px;
+        background: url(../static/images/main_img.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      h2{
+        margin: 20px;
+      }
+      .threed {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .diseases {
+        background-color: rgb(3, 110, 145);
+        background: rgba(0, 0, 0, 0.5);
+        /* background-color: rgb(140, 217, 225); */
+        padding-left: 10px;
+        width: 350px;
+        height: 580px;
+        margin: 25px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 30px;
+        padding-top: 5px;
+      }
+      @media only screen and (max-width: 994px) {
+        .diseases {
+          height: 450px;
+          width: 470px;
+          padding: 10px;
+        }
+      }
+      .norm {
+        color: rgb(235, 8, 8);
+        font-size: 18px;
+        font-weight: bold;
+      }
+      input {
+        width: 200px;
+        background-color: rgb(133, 179, 192);
+        /* background-color: rgb(6, 94, 105); */
+        font-weight: bold;
+        font-size: 15px;
+        /* color: white; */
+        border: none;
+        border-radius: 10px;
+        margin-left: 70px;
+        padding: 15px 0 15px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .first {
+        margin-top: 79px;
+      }
+      
+      .third {
+        margin-top: 15px;
+      }
+      @media only screen and (max-width: 994px) {
+        input {
+          /* padding-left: 15px; */
+          padding: 15px 0 15px 15px;
+          margin-left: 10px;
+        }
+        .first {
+          margin-top: 20px;
+        }
+        .sec {
+          margin-top: 5px;
+        }
+        .third {
+          margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Restrictive lung disease</h2>
+    <section class="threed">
+      <div class="diseases">
+        <h1>Chest Wall Disease</h1>
+        <br>
+        <br>
+        <br>
+        <p>
+          Chest wall diseases can be related to
+         restrictive lung diseases because they
+         can affect the ability of the lungs to
+         expand and contract during breathing,
+         leading to a reduction in lung volume
+         and decreased lung function. The chest
+         wall is the bony and muscular structure
+         that surrounds the lungs and helps to
+         protect them. If the chest wall is
+         weakened or deformed, it can interfere
+         with the mechanics of breathing and
+         result in a restrictive lung disease.
+          
+          
+                    
+        </p>
+        <br />
+        <input
+          type="submit"
+          class="first"
+          value="Home page"
+          onclick="submitForm()"
+        />
+      </div>
+      
+      <div class="diseases">
+        <h1>Neuro-muscular Disease</h1>
+        <br>
+        <p>
+          Neuromuscular diseases (NMDs) can be
+         related to restrictive lung diseases
+         because they can affect the function of
+         the muscles involved in breathing, such
+         as the diaphragm and intercostal
+         muscles. The diaphragm is the primary
+          muscle responsible for breathing, and
+          the intercostal muscles help to expand
+          and contract the rib cage during
+          breathing. If the muscles involved in
+         breathing are weakened or damaged, it
+         can lead to a reduction in lung volume
+         and decreased lung function, which can
+         result in a restrictive lung disease.
+        </p>
+        <br />
+        <input
+          type="submit"
+          class="third"
+          value="Home page"
+          onclick="submitForm()"
+        />
+      </div>
+    </section>
+
+    <script>
+      function submitForm() {
+        event.preventDefault();
+        window.location = "index";
+      }
+    </script>
+  </body>
+</html>

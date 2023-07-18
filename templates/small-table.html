@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restrictive-Report</title>
+    <link rel="icon" href="../static/images/medical.png" />
+    <link rel="stylesheet" href="../static/loading.css" />
+
+    <style>
+      /* Loading  */
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        scroll-behavior: smooth;
+      }
+      .body {
+        background: url("../static/images/main_img.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        color: white;
+      }
+      h2 {
+        padding: 20px;
+      }
+      .title {
+        color: rgb(2, 105, 102);
+      }
+      .container {
+        width: 100%;
+        min-height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .text {
+        margin-bottom: 25px;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+      .loading {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .loading .line-box {
+        padding: 2px;
+        width: 15%;
+        height: 27px;
+        border: 2px solid#267591;
+        border-radius: 20px;
+      }
+      .loading .line-box .line {
+        height: 20px;
+        border-radius: 20px;
+        background: white;
+        animation: loading 5s forwards cubic-bezier(0, 0, 0, 0);
+      }
+      @keyframes loading {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      /* Table  */
+      form {
+        display: block;
+        margin: 100px 0 20px ;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+
+        border-radius: 10px;
+      }
+      @media only screen and (max-width: 931px){
+        form {
+          max-width: 100%;
+        }
+      }
+      table {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid rgb(0, 0, 0);
+        border-collapse: collapse;
+      }
+      th {
+        background-color: rgb(2, 105, 102);
+        color: white;
+        padding: 5px;
+      }
+      tr {
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: rgb(255, 235, 197);
+      }
+      @media screen and (max-width: 600px) {
+        th,
+        td {
+          padding: 4px;
+        }
+      }
+      .first-td {
+        /* width: 50px; */
+        padding: 5px;
+      }
+      #diff td {
+        padding: 5px;
+        background-color: rgb(248, 208, 155);
+      }
+      input {
+        padding: 5px;
+        margin: 5px;
+        left: 10px;
+      }
+      .submit {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 40px;
+        padding: 10px 5px;
+        text-align: center;
+        background-color: rgb(2, 105, 102);
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        position: relative;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="loading" class="body">
+      <h2><strong>Restrictive lung disease</strong></h2>
+      <div class="container">
+        <div class="text">
+          <h1>Loading...</h1>
+        </div>
+        <div class="loading">
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="page-details">
+      <h2 class="title"><strong>Restrictive lung disease</strong></h2>
+      <form action="" method="post">
+        <table class="form" id="stable">
+          <tbody>
+            <tr>
+              <th rowspan="2">Measurement</th>
+              
+             
+            </tr>
+            <tr>
+              <th>Value</th>
+              
+              
+            </tr>
+            <tr>
+              <td class="first-td">FEV1 - Forced Expiratory Volume</td>
+              <td>
+                <input
+                  type="number"
+                  id="inp0"
+                  class="full"
+                  min="0"
+                  step="0.001"
+                  name="fev1_pre_value"
+                  required
+                  readonly
+                />
+              
+              </td>
+            </tr>
+            <tr>
+                <td class="first-td">MVV-Maximal voluntary ventilation</td>
+                <td>
+                  <input
+                    type="number"
+                    id="inp8"
+                    class="full"
+                    min="0"
+                    step="0.001"
+                    name="fef_pre_value"
+                    required
+                    readonly
+                  />
+                </td>
+          </tbody>
+        </table>
+        <br />
+        <input type="hidden" id="query" name="query" value="0" />
+        <section class="Button">
+          <input
+            class="submit"
+            type="submit"
+            value="Submit"
+            onclick="document.getElementById('query').value='1';"
+            formaction="Res-info"
+          />
+        </section>
+      </form>
+    </section>
+    <script>
+      // Hide the page details section initially
+      document.getElementById("page-details").style.display = "none";
+
+      // Wait for 5 seconds before showing the page details section
+      setTimeout(function () {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("page-details").style.display = "block";
+      }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Res_obs info</title>
+    <link rel="icon" href="../static/images/medical.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+        font-size: 17px;
+        background: url(../static/images/main_img.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .threed {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .diseases {
+        background-color: rgb(3, 110, 145);
+        background: rgba(0, 0, 0, 0.5);
+        /* background-color: rgb(140, 217, 225); */
+        padding-left: 10px;
+        width: 350px;
+        height: 550px;
+        margin: 25px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 30px;
+        padding-top: 5px;
+      }
+      @media only screen and (max-width: 994px) {
+        .diseases {
+          height: 450px;
+          width: 470px;
+          padding: 10px;
+        }
+      }
+      .norm {
+        color: rgb(235, 8, 8);
+        font-size: 18px;
+        font-weight: bold;
+      }
+      input {
+        width: 200px;
+        background-color: rgb(133, 179, 192);
+        /* background-color: rgb(6, 94, 105); */
+        font-weight: bold;
+        font-size: 15px;
+        /* color: white; */
+        border: none;
+        border-radius: 10px;
+        margin-left: 70px;
+        padding: 15px 0 15px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .first {
+        margin-top: 30px;
+      }
+      .sec {
+        margin-top: 160px;
+      }
+      .third {
+        margin-top: 50px;
+      }
+      @media only screen and (max-width: 994px) {
+        input {
+          /* padding-left: 15px; */
+          padding: 15px 0 15px 15px;
+          margin-left: 10px;
+        }
+        .first {
+          margin-top: 20px;
+        }
+        .sec {
+          margin-top: 90px;
+        }
+        .third {
+          margin-top: 35px;
+        }
+      }
+      .highlight {
+        border: 2px solid yellow;
+      }
+      .highlight h1,
+      .highlight p {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="threed">
+      <div class="diseases" data-label="Restrictive">
+        <h1>Restrictive lung disease</h1>
+        <p>
+          A type of respiratory condition that is characterized by a reduction
+          in lung volume, making it difficult to fully expand the lungs and
+          breathe in enough air. This can result in shortness of breath, chest
+          pain, rapid shallow breathing, dry cough, and fatigue. The most common
+          causes include lung tissue scarring, chest wall deformities,
+          neuromuscular diseases, and obesity. Other causes may include
+          radiation therapy, certain medications, and autoimmune diseases
+        </p>
+        <br />
+        <p>
+          <strong>
+            Would you like to know more about your obstructive lung disease?
+          </strong>
+        </p>
+        <input
+          type="submit"
+          class="first"
+          value="Continue"
+          onclick="submitForm2()"
+        />
+      </div>
+      <div class="diseases" data-label="Normal">
+        <h1>Normal</h1>
+        <p>
+          You're totally fine! Healthy lungs with normal pulmonary functions.
+          You may have stress or psychological issues. We suggest you relax and
+          try to enhance your lifestyle to a healthy one.
+        </p>
+        <br />
+        <p class="norm">
+          <strong>
+            If you still have the same symptoms, we suggest you have another
+            pulmonary test as the spirometry wasn't able to diagnose.
+          </strong>
+        </p>
+        <input
+          type="submit"
+          class="sec"
+          value="Home Page"
+          onclick="submitForm()"
+        />
+      </div>
+      <div class="diseases" data-label="Obstructive">
+        <h1>Obstructive lung disease</h1>
+        <p>
+          A type of respiratory condition that is characterized by airflow
+          limitation due to narrowing of the airways. This can make it difficult
+          to breathe, particularly during exhalation, wheezing, coughing, and
+          chest tightness. Obstructive lung disease can be caused by a variety of
+          factors, including smoking, air pollution, genetic factors, and
+          occupational exposures.
+        </p>
+        <br />
+        <p>
+          <strong>
+            Would you like to have another test to know more about your
+            obstructive lung disease?
+          </strong>
+        </p>
+        <input
+          type="submit"
+          class="third"
+          value="Continue"
+          onclick="submitForm1()"
+        />
+      </div>
+    </section>
+  
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const predictedLabel = urlParams.get("prediction_label");
+
+      // Get all the boxes
+      const boxes = document.querySelectorAll(".diseases");
+
+      // Highlight the box and text with the predicted label
+      boxes.forEach(box => {
+        const label = box.getAttribute("data-label");
+        if (label === predictedLabel) {
+          box.classList.add("highlight");
+          const textElements = box.querySelectorAll("h1, p");
+          textElements.forEach(textElement => {
+            textElement.classList.add("highlight");
+          });
+        }
+      });
+
+      function submitForm() {
+        event.preventDefault();
+        window.location = "index";
+      }
+      function submitForm1() {
+        event.preventDefault();
+        window.location = "intro";
+      }
+      function submitForm2() {
+        event.preventDefault();
+        window.location = "small-table";
+      }
+    </script>
+  </body>
+</html>

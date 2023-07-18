@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsructive info</title>
+    <link rel="icon" href="../static/images/medical.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+        font-size: 15px;
+        background: url(../static/images/main_img.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      h2{
+        margin: 20px;
+      }
+      .threed {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .diseases {
+        background-color: rgb(3, 110, 145);
+        background: rgba(0, 0, 0, 0.5);
+        /* background-color: rgb(140, 217, 225); */
+        padding-left: 10px;
+        width: 350px;
+        height: 580px;
+        margin: 25px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 26px;
+        padding-top: 5px;
+      }
+      @media only screen and (max-width: 994px) {
+        .diseases {
+          height: 450px;
+          width: 470px;
+          padding: 10px;
+        }
+      }
+      .norm {
+        color: rgb(235, 8, 8);
+        font-size: 18px;
+        font-weight: bold;
+      }
+      input {
+        width: 200px;
+        background-color: rgb(133, 179, 192);
+        /* background-color: rgb(6, 94, 105); */
+        font-weight: bold;
+        font-size: 15px;
+        /* color: white; */
+        border: none;
+        border-radius: 10px;
+        margin-left: 70px;
+        padding: 15px 0 15px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .first {
+        margin-top: 60px;
+      }
+     
+      
+      .third {
+        margin-top: 10px;
+      }
+      @media only screen and (max-width: 994px) {
+        input {
+          /* padding-left: 15px; */
+          padding: 15px 0 15px 15px;
+          margin-left: 10px;
+        }
+        .first {
+          margin-top: 20px;
+        }
+        
+        .third {
+          margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>obstructive lung disease</h2>
+    <section class="threed">
+      <div class="diseases">
+        <h1>Irreversible obstruction lung disease</h1>
+        <br>
+        <p>
+          A group of chronic conditions that cause permanent damage to the lungs and respiratory system, and cannot be fully cured or reversed. 
+          These conditions generally worsen over time and can significantly impact a person's quality of life.           
+        </p>
+        <br />
+        <br>
+        <p>
+          Treatment for irreversible lung diseases aims to slow the progression of the disease, manage symptoms, and improve quality of life. Treatment options may include medications such as bronchodilators and steroids, oxygen therapy, pulmonary rehabilitation,
+           and lifestyle modifications such as quitting smoking and avoiding exposure to irritants
+        </p>
+        <input
+          type="submit"
+          class="first"
+          value="Go Home"
+          onclick="submitForm1()"
+        />
+      </div>
+      
+      <div class="diseases">
+        <h1>Reversible obstruction lung disease </h1>
+        <br>
+        <p>
+          A group of conditions that cause temporary reversible obstruction or narrowing of the Airway in the lungs leading to difficulty breathing these conditions can be managed and treated with medication and lifestyle changes and the symptoms can be reversed or improved with proper treatment.
+          
+          
+        </p>
+      
+        <br />
+        <br>
+        <p>
+          Treatment involves the use of bronchodilators, which help to relax the muscles around the airways and improve airflow. Inhaled corticosteroids may also be prescribed to reduce inflammation in the airways.
+           Lifestyle changes, such as avoiding triggers that can worsen symptoms, can also be helpful in managing these conditions. 
+
+        </p>
+
+        <input
+          type="submit"
+          class="third"
+          value="More details"
+          onclick="submitForm()"
+        />
+        <input
+          type="submit"
+          class="third"
+          value="Go Home"
+          onclick="submitForm1()"
+        />
+      </div>
+    </section>
+    <script>
+      function submitForm1() {
+        event.preventDefault();
+        window.location = "index";
+      }
+    </script>
+
+    <script>
+      function submitForm() {
+        event.preventDefault();
+        window.location = "more detailed obs_rev";
+      }
+    </script>
+  </body>
+</html>

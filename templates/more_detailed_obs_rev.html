@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsructive info</title>
+    <link rel="icon" href="../static/images/medical.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+        font-size: 16px;
+        background: url(../static/images/main_img.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      h2{
+        margin: 20px;
+      }
+      .threed {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .diseases {
+        background-color: rgb(3, 110, 145);
+        background: rgba(0, 0, 0, 0.5);
+        /* background-color: rgb(140, 217, 225); */
+        padding-left: 10px;
+        width: 350px;
+        height: 580px;
+        margin: 25px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 27px;
+        padding-top: 5px;
+      }
+      @media only screen and (max-width: 994px) {
+        .diseases {
+          height: 450px;
+          width: 470px;
+          padding: 10px;
+        }
+      }
+      .norm {
+        color: rgb(235, 8, 8);
+        font-size: 18px;
+        font-weight: bold;
+      }
+      input {
+        width: 200px;
+        background-color: rgb(133, 179, 192);
+        /* background-color: rgb(6, 94, 105); */
+        font-weight: bold;
+        font-size: 15px;
+        /* color: white; */
+        border: none;
+        border-radius: 10px;
+        margin-left: 70px;
+        padding: 15px 0 15px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .first {
+        margin-top: 30px;
+      }
+      
+      .third {
+        margin-top: 30px;
+      }
+      @media only screen and (max-width: 994px) {
+        input {
+          /* padding-left: 15px; */
+          padding: 15px 0 15px 15px;
+          margin-left: 10px;
+        }
+        .first {
+          margin-top: 20px;
+        }
+        .sec {
+          margin-top: 5px;
+        }
+        .third {
+          margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>obstructive lung disease</h2>
+    <section class="threed">
+      <div class="diseases">
+        <h1>You may suffer from COPD</h1>
+        <br>
+        <p>
+            Chronic obstructive pulmonary disease is a progressive lung disease that is usually caused by long-term exposure to irritants such as cigarette smoke,
+             air pollution, and chemical fumes. COPD is characterized by airflow limitation due to inflammation, 
+             mucus production, and narrowing of the airways, which makes it difficult to breathe.
+                    
+        </p>
+        <br />
+        <br>
+        <p>
+            Treatment for COPD focuses on managing symptoms and slowing the progression of the disease. This may include medications such as bronchodilators and steroids, oxygen therapy, pulmonary rehabilitation,
+             and lifestyle modifications such as quitting smoking and avoiding exposure to irritants
+        </p>
+        <input
+          type="submit"
+          class="first"
+          value="Home page"
+          onclick="submitForm()"
+        />
+      </div>
+      
+      <div class="diseases">
+        <h1>You may suffer from Asthma</h1>
+        <br>
+        <p>
+            Asthma is a chronic inflammatory disease of the airways that causes episodes of wheezing, coughing, chest tightness, and shortness of breath. In people with asthma, exposure to certain triggers such as allergens, exercise, cold air, or respiratory infections can cause
+            inflammation and narrowing of the airways, making it difficult to breathe.
+        </p>
+        <br />
+        <br>
+        <p>
+            There is no cure for asthma, but it can be managed with proper treatment, which may include daily medications such as inhaled corticosteroids and
+            bronchodilators, as well as avoidingtriggers and adopting healthy lifestyle habits such as regular exercise.
+        </p>
+        <input
+          type="submit"
+          class="third"
+          value="Home page"
+          onclick="submitForm()"
+        />
+      </div>
+    </section>
+
+    <script>
+      function submitForm() {
+        event.preventDefault();
+        window.location = "index";
+      }
+    </script>
+  </body>
+</html>

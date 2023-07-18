@@ -1,0 +1,419 @@
+html {
+  height: 100%;
+  
+}
+
+/* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  justify-items: center;
+  scroll-behavior: smooth;
+  align-items: center;
+  color: white;
+  transition: all 0.3s;
+}
+body{
+
+    background-color: #E0E1DD;
+}
+
+/******************* header  *****************/
+
+header {
+  
+  width: 100%;
+  position: fixed; 
+  padding: 10px 200px;
+  /* background:  rgba(140, 227, 245, 0.91); */
+  background:  rgba(66, 211, 240, 0.91);
+  border-radius:  0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+ .main-icon{
+    font-size: 25px;
+ }
+ 
+.nav a {
+  float: left;
+  text-decoration: none;
+  /* color:#013c66; */
+  color: white;
+  font-size: 20px ;
+  font-weight: 500;
+  padding: 10px 10px 10px 40px;
+  transition: all 0.3;
+
+  height: 40px;
+}
+.nav a:hover {
+    color: #13283E;
+    transition-delay: 0.02s;
+    font-size: 20.5px;
+}
+
+
+
+@media only screen and (max-width:761px){
+    .nav a {
+        display: flex;
+        flex-wrap: nowrap;
+        padding:5px ;
+        font-size: 15px;
+     }
+  }
+
+  @media only screen and (max-width:575px){
+    .nav {
+
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+        justify-content: center;
+        
+     }
+     .nav a{
+        margin: 10px;
+        padding: 0 20px 0 20px;
+
+     }
+
+  }
+
+
+  /***************  main img *****************/
+.main{
+
+    background-image: url(../static/images/main_img.jpg);
+
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main p{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 250px;
+    margin-left: 20px;
+
+
+    /* animation: move 3s infinite ; */
+    animation-name: move ;
+    animation-duration: 6s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 0.2;
+}
+
+@keyframes move {
+    0%   {top: 380px ;}
+    100%  {bottom: 100px;}
+
+  }
+
+  /**************** Learn More  ******************/
+
+  #start0{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 18px;
+    position: relative;
+    width: 130px;
+    height: 65px;
+    top: -240px;
+    left: 50px;
+    
+    border-radius: 5px;
+    background-color:rgba(66, 211, 240, 0.91);
+
+    color: white;
+    border-bottom: 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+
+/****************** project aim ***************/
+
+.aim{
+    
+    background-color:#E0E1DD; ;
+    border: 2px solid #E0E1DD;
+    border-radius: 5px;
+   
+}
+
+.aim h1:hover{
+    color: rgb(3, 110, 145);
+}
+.aim h1{
+    margin: 80px auto 80px auto;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+.aim p{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    border-radius: 15px;
+
+    width: 50%;
+    margin: 80px auto 80px auto;
+    padding: 5px;
+    line-height: 30px;
+
+}
+.aim p:hover{
+    box-shadow: 1px 1px 10px rgb(3, 110, 145);
+}
+
+
+
+
+/*************** Team Photos *****************/
+
+
+
+.team-img{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: white;
+
+    
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.team-img h1:hover{
+    color: rgb(3, 110, 145);
+}
+.LLL{
+    text-align: center;
+    color: #000000;
+    width: 100%;
+    padding: 5px 10px 50px 10px;
+}
+
+.border{
+
+    border: 1px solid rgb(3, 110, 145);
+    border-radius: 10px;
+    width: 280px;
+    height: 300px;
+    
+    padding: 20px;
+    margin: 10px;
+
+
+}
+
+.border:hover{
+    box-shadow: 1px 1px 10px rgb(3, 110, 145);
+}
+
+.team-img img{
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+}
+
+.border h3{
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+
+ /*********************** FORM *******************/
+
+ .container{
+
+    position: relative;    
+    max-width: 430px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    background: #fff ;  
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+    
+}
+
+.title{
+    color: #000000;
+}
+
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+   
+}
+.container.active .signup{
+    opacity: 1;
+  
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {  
+    color: #000000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+
+/* .input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+} */
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    
+}
+
+/* .input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+} */
+
+.input-field i.showHidePw{
+    position: absolute; 
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #203f61;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease ;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+}
+
+
+/************** FOOTER  ****************/
+
+footer{
+
+    font: 30px;
+    
+}
+footer p{
+    text-align: center;
+    background-color: #13283E;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;   
+}
+
+
